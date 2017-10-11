@@ -1,0 +1,571 @@
+﻿<Window x:Class="ISTEpage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISTEpage"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="650"
+	    Width="800"  WindowStartupLocation='CenterScreen'>
+    <Grid Width="800" Margin="0">
+        <Image Source="/Images/background.jpg" Stretch="UniformToFill"></Image>
+        <TextBlock Text='    INFORMATION Sciences and Technology @ RIT'
+							 FontSize="32"
+							 FontWeight="Bold"
+                               Foreground="DarkSlateBlue" Margin="18,0,-18,-0.5"/>
+        <TabControl Margin="9,47,20,86.5">
+
+            <TabItem Name="About" Header="About">
+
+                <Grid Margin="2">
+                    <Image Source="/Images/pic1.jpg" Stretch="UniformToFill" Margin="1,0,-1,0"></Image>
+                    <TextBlock Name="title" TextWrapping="wrap" FontSize="24"  Width="623" Margin="74,19,64,388" TextAlignment="Center"/>
+                    <TextBlock Name="description" TextWrapping="wrap" Width="600" TextAlignment="Center" Margin="86,96,75,211"/>
+                    <TextBlock Name="quote" Foreground="Blue" TextWrapping="wrap"  TextAlignment="Center" Margin="148,242,135,108"/>
+                    <TextBlock Name="quoteAuthor" TextWrapping="wrap"  Width="260" TextAlignment="Right" Margin="416,355,85,66" RenderTransformOrigin="0.481,1.194"/>
+                </Grid>
+
+
+            </TabItem>
+            <TabItem Name="Undergraduate" Header="Undergraduate" VerticalAlignment="Center">
+                <Grid Background="#FFE5E5E5" Margin="2">
+                    <Image Source="/Images/pic1.jpg" Stretch="UniformToFill" Margin="1,0,-1,0"></Image>
+                    <TextBlock Text='Undergraduate Degrees'
+							 FontSize="30"
+							 FontWeight="Bold"
+                               Foreground="white" TextAlignment="Center" VerticalAlignment="Top" Height="57" Margin="0,18,0,0"/>
+                    <TabControl Margin="33,76,42,49">
+
+                        <TabItem Name="underHeader0" >
+                            <StackPanel>
+                                <StackPanel.Background>
+                                    <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                </StackPanel.Background>
+                                <TextBlock Height="20"></TextBlock>
+                                <TextBlock Name="title0" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                <TextBlock x:Name="description0" TextWrapping="wrap" TextAlignment="Center" Height="64" Margin="31,0,43,0"/>
+                                <TextBlock Text="Concentrations : " FontSize="14" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+
+                                <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Concentrations0}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Name="underHeader1" >
+                            <StackPanel>
+                                <StackPanel.Background>
+                                    <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                </StackPanel.Background>
+                                <TextBlock Height="20"></TextBlock>
+                                <TextBlock Name="title1" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="74"></TextBlock>
+                                <TextBlock x:Name="description1" TextWrapping="wrap" TextAlignment="Center" Height="64" Margin="31,0,43,0"/>
+                                <TextBlock Text="Concentrations : " FontSize="14" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+
+                                <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Concentrations1}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Name="underHeader2" >
+                            <StackPanel>
+                                <StackPanel.Background>
+                                    <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                </StackPanel.Background>
+                                <TextBlock Height="20"></TextBlock>
+                                <TextBlock Name="title2" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                <TextBlock x:Name="description2" TextWrapping="wrap" TextAlignment="Center" Height="64" Margin="31,0,43,0"/>
+                                <TextBlock Text="Concentrations : " FontSize="14" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+
+                                <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Concentrations2}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                            </StackPanel>
+                        </TabItem>
+
+
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Graduate" Header="Graduate">
+                <Grid Background="#FFE5E5E5" Margin="2">
+                    <Image Source="/Images/pic1.jpg" Stretch="UniformToFill" Margin="1,0,-1,0"></Image>
+                    <TextBlock Text='Graduate Degrees'
+							 FontSize="30"
+							 FontWeight="Bold"
+                               Foreground="white" TextAlignment="Center" VerticalAlignment="Top" Height="57" Margin="0,17,0,0"/>
+                    <TabControl Margin="33,76,42,49">
+
+                        <TabItem Name="gradHeader0" >
+                            <StackPanel>
+                                <StackPanel.Background>
+                                    <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                </StackPanel.Background>
+                                <TextBlock Height="20"></TextBlock>
+                                <TextBlock Name="gradTitle0" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                <TextBlock x:Name="gradDescription0" TextWrapping="wrap" TextAlignment="Center" Height="64" Margin="31,0,43,0"/>
+                                <TextBlock Text="Concentrations : " FontSize="14" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+
+                                <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=GradConcentrations0}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Name="gradHeader1" >
+                            <StackPanel>
+                                <StackPanel.Background>
+                                    <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                </StackPanel.Background>
+                                <TextBlock Height="20"></TextBlock>
+                                <TextBlock Name="gradTitle1" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="58"></TextBlock>
+                                <TextBlock x:Name="gradDescription1" TextWrapping="wrap" TextAlignment="Center" Height="64" Margin="31,0,43,0"/>
+                                <TextBlock Text="Concentrations : " FontSize="14" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+
+                                <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=GradConcentrations1}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                            </StackPanel>
+                        </TabItem>
+                        <TabItem Name="gradHeader2" >
+                            <StackPanel>
+                                <StackPanel.Background>
+                                    <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                </StackPanel.Background>
+                                <TextBlock Height="20"></TextBlock>
+                                <TextBlock Name="gradTitle2" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                <TextBlock x:Name="gradDescription2" TextWrapping="wrap" TextAlignment="Center" Height="64" Margin="31,0,43,0"/>
+                                <TextBlock Text="Concentrations : " FontSize="14" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+
+                                <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=GradConcentrations2}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                            </StackPanel>
+                        </TabItem>
+
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Employment" Header="Employment">
+                
+                    <Grid Background="#FFE5E5E5" Margin="2">
+
+                        <Image Source="/Images/pic1.jpg" Stretch="UniformToFill" Margin="1,0,-1,1" />
+                    <TextBlock Name="employTitle" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" TextWrapping="Wrap" Margin="2,0,0,381"></TextBlock>
+                        <GroupBox Header="Employment" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="45,83,395,54">
+                            <TextBlock Name="EmploymentDesc" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="24,63,24,5"/>
+                        </GroupBox>
+                        <GroupBox Header="Cooperative Education" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="394,83,45,54">
+                            <TextBlock Name="CoopTitle" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="24,26,24,5"/>
+                        </GroupBox>
+
+                    </Grid>
+
+            </TabItem>
+            <TabItem Name="Minors" Header="Minors">
+                <Grid Background="#FFE5E5E5" Margin="2">
+                    <Image Source="/Images/pic1.jpg" Stretch="UniformToFill" Margin="1,0,-1,0"></Image>
+                    <TextBlock Text='Undergraduate Minors'
+							 FontSize="30"
+							 FontWeight="Bold"
+                               Foreground="white" TextAlignment="Center" VerticalAlignment="Top" Height="43" Margin="0,5,0,0"/>
+                    <TabControl Margin="25,50,25,28">
+
+                        <TabItem Name="minorHeader0" >
+                            <ScrollViewer>
+                                <StackPanel HorizontalAlignment="Right" Width="688">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                    </StackPanel.Background>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock Name="minorTitle0" FontSize="22" TextWrapping="wrap" TextAlignment="Center" Height="47" Margin="3,0,0,0"></TextBlock>
+                                    <TextBlock Name="minorDescription0" TextWrapping="wrap" TextAlignment="center" Height="177" Margin="27,0"></TextBlock>
+                                    <TextBlock Text="Courses : " FontSize="14" TextAlignment="center" FontWeight="bold" Height="20" Margin="114,0,107,0" RenderTransformOrigin="0.496,1.75"></TextBlock>
+                                    <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Courses0}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <GroupBox Header="Note" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="68,0,70,0" Height="83">
+                                        <TextBlock Name="minorNote0" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="47,0,47,5"/>
+                                    </GroupBox>
+                                    <TextBlock></TextBlock>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Name="minorHeader1" >
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                    </StackPanel.Background>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock Name="minorTitle1" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                    <TextBlock Name="minorDescription1" TextWrapping="wrap" TextAlignment="center" Height="177" Margin="27,0"></TextBlock>
+                                    <TextBlock Text="Courses : " FontSize="14" TextAlignment="center" FontWeight="bold" Height="20" Margin="114,0,107,0" RenderTransformOrigin="0.496,1.75"></TextBlock>
+                                    <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Courses1}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <GroupBox Header="Note" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="68,0,70,0" Height="83">
+                                        <TextBlock Name="minorNote1" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="47,0,47,5"/>
+                                    </GroupBox>
+                                    <TextBlock></TextBlock>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Name="minorHeader2" >
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                    </StackPanel.Background>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock Name="minorTitle2" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                    <TextBlock Name="minorDescription2" TextWrapping="wrap" TextAlignment="center" Height="189" Margin="27,0"></TextBlock>
+                                    <TextBlock Text="Courses : " FontSize="14" TextAlignment="center" FontWeight="bold" Height="20" Margin="114,0,107,0" RenderTransformOrigin="0.496,1.75"></TextBlock>
+                                    <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Courses2}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <GroupBox Header="Note" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="68,0,70,0" Height="112">
+                                        <TextBlock Name="minorNote2" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="47,0,47,5"/>
+                                    </GroupBox>
+                                    <TextBlock></TextBlock>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Name="minorHeader3" >
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                    </StackPanel.Background>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock Name="minorTitle3" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                    <TextBlock Name="minorDescription3" TextWrapping="wrap" TextAlignment="center" Height="163" Margin="27,0"></TextBlock>
+                                    <TextBlock Text="Courses : " FontSize="14" TextAlignment="center" FontWeight="bold" Height="20" Margin="114,0,107,0" RenderTransformOrigin="0.496,1.75"></TextBlock>
+                                    <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Courses3}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <GroupBox Header="Note" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="68,0,70,0" Height="112">
+                                        <TextBlock Name="minorNote3" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="47,0,47,5"/>
+                                    </GroupBox>
+                                    <TextBlock></TextBlock>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Name="minorHeader4" >
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                    </StackPanel.Background>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock Name="minorTitle4" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                    <TextBlock Name="minorDescription4" TextWrapping="wrap" TextAlignment="center" Height="163" Margin="27,0"></TextBlock>
+                                    <TextBlock Text="Courses : " FontSize="14" TextAlignment="center" FontWeight="bold" Height="20" Margin="114,0,107,0" RenderTransformOrigin="0.496,1.75"></TextBlock>
+                                    <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Courses4}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <GroupBox Header="Note" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="68,0,70,0" Height="112">
+                                        <TextBlock Name="minorNote4" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="47,0,47,5"/>
+                                    </GroupBox>
+                                    <TextBlock></TextBlock>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Name="minorHeader5" >
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                    </StackPanel.Background>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock Name="minorTitle5" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                    <TextBlock Name="minorDescription5" TextWrapping="wrap" TextAlignment="center" Height="168" Margin="27,0"></TextBlock>
+                                    <TextBlock Text="Courses : " FontSize="14" TextAlignment="center" FontWeight="bold" Height="20" Margin="114,0,107,0" RenderTransformOrigin="0.496,1.75"></TextBlock>
+                                    <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Courses5}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <GroupBox Header="Note" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="68,0,70,0" Height="112">
+                                        <TextBlock Name="minorNote5" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="47,0,47,5"/>
+                                    </GroupBox>
+                                    <TextBlock></TextBlock>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Name="minorHeader6" >
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                    </StackPanel.Background>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock Name="minorTitle6" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                    <TextBlock Name="minorDescription6" TextWrapping="wrap" TextAlignment="center" Height="168" Margin="27,0"></TextBlock>
+                                    <TextBlock Text="Courses : " FontSize="14" TextAlignment="center" FontWeight="bold" Height="20" Margin="114,0,107,0" RenderTransformOrigin="0.496,1.75"></TextBlock>
+                                    <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Courses6}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <GroupBox Header="Note" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="68,0,70,0" Height="112">
+                                        <TextBlock Name="minorNote6" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="47,0,47,5"/>
+                                    </GroupBox>
+                                    <TextBlock></TextBlock>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Name="minorHeader7" >
+                            <ScrollViewer>
+                                <StackPanel>
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/background.jpg"></ImageBrush>
+                                    </StackPanel.Background>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock Name="minorTitle7" FontSize="24" TextWrapping="wrap" TextAlignment="Center" Height="90"></TextBlock>
+                                    <TextBlock Name="minorDescription7" TextWrapping="wrap" TextAlignment="center" Height="165" Margin="27,0"></TextBlock>
+                                    <TextBlock Text="Courses : " FontSize="14" TextAlignment="center" FontWeight="bold" Height="20" Margin="114,0,107,0" RenderTransformOrigin="0.496,1.75"></TextBlock>
+                                    <ItemsControl Grid.Column="0" ItemsSource="{Binding Path=Courses7}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Margin="2" Text="{Binding}" TextAlignment="Center"></TextBlock>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <GroupBox Header="Note" FontWeight="bold" BorderBrush="DarkSlateBlue" Margin="68,0,70,0" Height="112">
+                                        <TextBlock Name="minorNote7" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" Margin="47,0,47,5"/>
+                                    </GroupBox>
+                                    <TextBlock></TextBlock>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+
+
+                    </TabControl>
+                </Grid>
+            </TabItem>
+
+            <TabItem Name="Map" Header="Map">
+                <Grid>
+                    <Image Source="/Images/pic1.jpg" Stretch="UniformToFill" Margin="1,0,-1,0"></Image>
+                    <Frame VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Name="map" Width="536" Margin="114,14,115,14" />
+                </Grid>
+            </TabItem>
+            <TabItem Name="contact" Header="About Our Sites">
+
+                <Frame VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Name="contact_form" Margin="18,14,19,14" />
+            </TabItem>
+        </TabControl>
+        <TextBlock  Margin="36,535,682,49.5">           
+            
+            <Hyperlink FontWeight="bold" FontSize="13" NavigateUri="http://www.rit.edu/admission.html" RequestNavigate="applyNow_RequestNavigate">
+                <Hyperlink.Style>
+                    <Style TargetType="Hyperlink"
+                           BasedOn="{StaticResource {x:Type Hyperlink}}">
+                        <Setter Property="Foreground" Value="DarkSlateBlue"/>
+                    </Style>
+                </Hyperlink.Style>
+                Apply Now
+            </Hyperlink>
+        </TextBlock>
+
+        <TextBlock  Margin="168,535,522,50.5" RenderTransformOrigin="0.079,-0.382">           
+            
+            <Hyperlink FontWeight="bold" FontSize="13" NavigateUri="http://www.rit.edu/ask/" RequestNavigate="aboutThisSite_RequestNavigate">
+                <Hyperlink.Style>
+                    <Style TargetType="Hyperlink"
+                           BasedOn="{StaticResource {x:Type Hyperlink}}">
+                        <Setter Property="Foreground" Value="DarkSlateBlue"/>
+                    </Style>
+                </Hyperlink.Style>
+                Send us Feedback
+            </Hyperlink>
+        </TextBlock>
+
+        <TextBlock  Margin="364,537,349,48.5" RenderTransformOrigin="0.079,-0.382">           
+            
+            <Hyperlink FontWeight="bold" FontSize="13" NavigateUri="http://ist.rit.edu/api/contactForm/" RequestNavigate="supportIst_RequestNavigate">
+                <Hyperlink.Style>
+                    <Style TargetType="Hyperlink"
+                           BasedOn="{StaticResource {x:Type Hyperlink}}">
+                        <Setter Property="Foreground" Value="DarkSlateBlue"/>
+                    </Style>
+                </Hyperlink.Style>
+                Contact Us
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock  Margin="525,535,165,50.5" RenderTransformOrigin="0.079,-0.382">           
+            
+            <Hyperlink FontWeight="bold" FontSize="13" NavigateUri="https://twitter.com/istatrit" RequestNavigate="labHours_RequestNavigate">
+                <Hyperlink.Style>
+                    <Style TargetType="Hyperlink"
+                           BasedOn="{StaticResource {x:Type Hyperlink}}">
+                        <Setter Property="Foreground" Value="DarkSlateBlue"/>
+                    </Style>
+                </Hyperlink.Style>
+                Twitter
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock  Margin="668,535,22,51.5" RenderTransformOrigin="0.079,-0.382">           
+            
+            <Hyperlink FontWeight="bold" FontSize="13" NavigateUri="https://www.facebook.com/ISTatRIT" RequestNavigate="login_RequestNavigate">
+                <Hyperlink.Style>
+                    <Style TargetType="Hyperlink"
+                           BasedOn="{StaticResource {x:Type Hyperlink}}">
+                        <Setter Property="Foreground" Value="DarkSlateBlue"/>
+                    </Style>
+                </Hyperlink.Style>
+                Facebook
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock  Margin="288,567,287,19.5" RenderTransformOrigin="0.079,-0.382">           
+            
+                        
+            <Hyperlink FontWeight="bold" FontSize="14" NavigateUri="http://www.rit.edu/" RequestNavigate="rochester_RequestNavigate">
+                <Hyperlink.Style>
+                    <Style TargetType="Hyperlink"
+                           BasedOn="{StaticResource {x:Type Hyperlink}}">
+                        <Setter Property="Foreground" Value="Blue"/>
+                    </Style>
+                </Hyperlink.Style>
+                Rochester Institute of Technology
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock  Margin="230,588,230,-1.5" RenderTransformOrigin="0.079,-0.382">           
+            
+            <Hyperlink FontWeight="bold" FontSize="13" NavigateUri="http://www.rit.edu/maps/" RequestNavigate="address_RequestNavigate">
+                <Hyperlink.Style>
+                    <Style TargetType="Hyperlink"
+                           BasedOn="{StaticResource {x:Type Hyperlink}}">
+                        <Setter Property="Foreground" Value="DarkSlateBlue"/>
+                    </Style>
+                </Hyperlink.Style>
+                One Lomb Memorial Drive, Rochester, NY 14623-5603 
+            </Hyperlink>
+        </TextBlock>
+
+    </Grid>
+</Window>
